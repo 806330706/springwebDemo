@@ -1,0 +1,13 @@
+<html> 
+<body>
+	<h1>test!</h1>
+	<fileset>
+	<legend>测试版本IOS</legend>
+	<form action="version" method="GET">
+		<lable>平台：</lable> <input type="text" name="platform" value="ios" />
+	    <lable>版本：</lable> <input type="text" name="os" value="Fkyme OS 2.5.5" />
+		<input type="submit" value="调用" />
+	</form>
+	</fileset>
+</body> 
+</html> 

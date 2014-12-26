@@ -1,0 +1,39 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<servlet>
+		<servlet-name>scgj</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<!-- 很神奇。。。 -->
+	<servlet>
+	    <servlet-name>jsp</servlet-name>
+	    <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>scgj</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	<!-- 很神奇。。。 -->
+	<servlet-mapping>
+    	<servlet-name>jsp</servlet-name>
+    	<url-pattern>/WEB-INF/views/*</url-pattern>
+ 	</servlet-mapping>
+
+
+<!--     <listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener> -->
+<!-- 	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath:applicationContext-service.xml
+		</param-value>
+	</context-param> -->
+</web-app>

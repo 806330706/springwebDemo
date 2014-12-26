@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Oridnary</title>
+  </head>
+  <body>
+	#include("headtitle.vm")  
+  	<div>
+		这是一个普通的页面
+	    <img alt="微笑" src="../im/xiao.gif">
+    </div>
+    <div>
+    	<div style="border:1px dashed black;width:300px;float:left;margin-left:10px;padding-left:10px;">
+			strlist:
+			<div>
+				<ul>
+    				#foreach($str in $strlist)
+    					<li>${str}</li>
+    				#end
+                </ul>
+			</div>
+        </div>
+		<div style="border:1px dashed black;width:300px;float:left;margin-left:10px;padding-left:10px;">
+			map:
+			<div>
+				<ul>
+    				#foreach($ma in $map.entrySet())
+    					<li>$!{ma.key}-${ma.value}</li>
+    				#end
+                </ul>
+			</div>
+        </div>
+		<div style="border:1px dashed black;width:300px;float:left;margin-left:10px;padding-left:10px;">
+			object:
+			<div>
+				<ul>
+    				#foreach($user in $uselist)
+    					<li>${user.username}-${user.nickname}</li>
+    				#end
+                </ul>
+			</div>
+        </div>
+    </div>
+  </body>
+</html>
